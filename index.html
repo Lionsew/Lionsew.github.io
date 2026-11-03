@@ -42,17 +42,44 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card:hover {
-            border-color: rgba(74, 222, 128, 0.3);
-        }
-    </style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  /* Definición personalizada de variables para el tema sunset */
+  [data-theme="sunset"] {
+    --color-base-100: oklch(22% 0.019 237.69);
+    --color-base-200: oklch(20% 0.019 237.69);
+    --color-base-300: oklch(18% 0.019 237.69);
+    --color-base-content: oklch(77.383% 0.043 245.096);
+    --color-primary: oklch(74.703% 0.158 39.947);
+    --color-primary-content: oklch(14.94% 0.031 39.947);
+    --color-secondary: oklch(72.537% 0.177 2.72);
+    --color-secondary-content: oklch(14.507% 0.035 2.72);
+    --color-accent: oklch(71.294% 0.166 299.844);
+    --color-accent-content: oklch(14.258% 0.033 299.844);
+    --color-neutral: oklch(26% 0.019 237.69);
+    --color-neutral-content: oklch(70% 0.019 237.69);
+    --color-info: oklch(85.559% 0.085 206.015);
+    --color-info-content: oklch(17.111% 0.017 206.015);
+    --color-success: oklch(85.56% 0.085 144.778);
+    --color-success-content: oklch(17.112% 0.017 144.778);
+    --color-warning: oklch(85.569% 0.084 74.427);
+    --color-warning-content: oklch(17.113% 0.016 74.427);
+    --color-error: oklch(85.511% 0.078 16.886);
+    --color-error-content: oklch(17.102% 0.015 16.886);
+    --rounded-box: 1rem;
+    --rounded-btn: 0.5rem;
+    --rounded-badge: 1rem;
+  }
+
+  .glass-card {
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+  }
+</style>
 </head>
 <body class="bg-base-100 text-base-content font-sans antialiased selection:bg-brand-500 selection:text-black">
 
