@@ -3,45 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Scientist Portfolio</title>
-
-  <!-- Tailwind Configuration MUST be loaded BEFORE the Tailwind CDN script -->
-  <script>
-    tailwind = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              cyan: '#06b6d4',
-              emerald: '#10b981',
-              dark: '#030712'
-            }
-          }
-        }
-      }
-    };
-  </script>
+  <title>Lionsew | Data Scientist Portfolio</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Respaldo CSS directo para forzar el tema oscuro inmediatamente -->
+  <style>
+    body {
+      background-color: #030712 !important;
+      color: #e2e8f0 !important;
+    }
+  </style>
 </head>
-<body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-cyan selection:text-white">
+<body class="bg-[#030712] text-slate-200 font-sans antialiased selection:bg-cyan-500 selection:text-white">
 
   <!-- NAVBAR -->
-  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#030712]/80 border-b border-slate-800/80">
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#030712]/90 border-b border-slate-800">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#hero" class="text-lg font-bold text-slate-100 flex items-center gap-2">
-        <span class="text-brand-cyan font-mono">&lt;DS&gt;</span>
+        <span class="text-cyan-400 font-mono">&lt;DS&gt;</span>
         <span>Lionsew</span>
       </a>
       <div class="flex items-center gap-6 text-sm font-medium text-slate-400">
-        <a href="#proyectos" class="hover:text-brand-cyan transition-colors">Proyectos</a>
-        <a href="#skills" class="hover:text-brand-cyan transition-colors">Stack</a>
-        <a href="#contacto" class="hover:text-brand-cyan transition-colors">Contacto</a>
-        <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-3.5 py-1.5 rounded-lg bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30 hover:bg-brand-cyan/20 transition-all">
+        <a href="#proyectos" class="hover:text-cyan-400 transition-colors">Proyectos</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Stack</a>
+        <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+        <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-3.5 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/20 transition-all">
           CV PDF
         </a>
       </div>
@@ -49,22 +40,22 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <header id="hero" class="relative pt-24 pb-20 px-6 border-b border-slate-800/60 overflow-hidden">
+  <header id="hero" class="relative pt-24 pb-20 px-6 border-b border-slate-800/60 overflow-hidden bg-[#030712]">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.15),rgba(255,255,255,0))] pointer-events-none"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/20 mb-6">
-        <span class="w-2 h-2 rounded-full bg-brand-emerald animate-pulse"></span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         Disponible para oportunidades Jr Data Scientist
       </div>
       <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight">
-        Modelos con impacto comercial y pipelines <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-emerald">end-to-end</span>
+        Modelos con impacto comercial y pipelines <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">end-to-end</span>
       </h1>
       <p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
         Data Scientist especializado en transformar datos complejos en decisiones medibles mediante Machine Learning, APIs contenerizadas y análisis exploratorio riguroso.
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="#proyectos" class="px-6 py-3 rounded-lg bg-brand-cyan hover:bg-cyan-400 text-slate-950 font-semibold transition-colors flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+        <a href="#proyectos" class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-colors flex items-center gap-2 shadow-lg shadow-cyan-500/20">
           Ver Proyectos
           <i data-lucide="arrow-down" class="w-4 h-4"></i>
         </a>
@@ -80,7 +71,7 @@
   <section id="proyectos" class="py-20 px-6 max-w-6xl mx-auto">
     <div class="mb-12">
       <h2 class="text-2xl sm:text-3xl font-bold text-slate-100 flex items-center gap-3">
-        <i data-lucide="folder-git-2" class="text-brand-cyan"></i>
+        <i data-lucide="folder-git-2" class="text-cyan-400"></i>
         Proyectos Destacados
       </h2>
       <p class="text-slate-400 mt-2 text-sm sm:text-base">Soluciones orientadas a impacto de negocio con pipelines reproducibles y documentados.</p>
@@ -92,19 +83,19 @@
       <article class="bg-slate-900/60 rounded-xl border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-cyan-950/20">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">Machine Learning</span>
+            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Machine Learning</span>
             <div class="flex gap-3 text-slate-400">
-              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cyan transition-colors" title="Ver repositorio en GitHub">
+              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors" title="Ver repositorio en GitHub">
                 <i data-lucide="github" class="w-5 h-5"></i>
               </a>
             </div>
           </div>
-          <h3 class="text-xl font-bold text-slate-100 hover:text-brand-cyan transition-colors">Predicción de Churn & Estrategia de Retención</h3>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">Predicción de Churn & Estrategia de Retención</h3>
           <p class="mt-3 text-slate-400 text-sm leading-relaxed">
             Modelo clasificador LightGBM con optimización bayesiana para identificar clientes con alto riesgo de abandono. Se calibró el umbral de corte según la matriz de costes y beneficios de la campaña comercial para maximizar el ROI de retención.
           </p>
           <div class="mt-4 p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 text-xs text-slate-300">
-            <span class="text-brand-emerald font-semibold">Impacto:</span> Recall del 84% en el decil superior de riesgo, estimando una reducción del 12% en cancelaciones evitables.
+            <span class="text-emerald-400 font-semibold">Impacto:</span> Recall del 84% en el decil superior de riesgo, estimando una reducción del 12% en cancelaciones evitables.
           </div>
         </div>
         <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
@@ -119,19 +110,19 @@
       <article class="bg-slate-900/60 rounded-xl border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-cyan-950/20">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/20">End-to-End / API</span>
+            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">End-to-End / API</span>
             <div class="flex gap-3 text-slate-400">
-              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cyan transition-colors" title="Ver repositorio en GitHub">
+              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors" title="Ver repositorio en GitHub">
                 <i data-lucide="github" class="w-5 h-5"></i>
               </a>
             </div>
           </div>
-          <h3 class="text-xl font-bold text-slate-100 hover:text-brand-cyan transition-colors">API de Tasación Inmobiliaria & App Interactiva</h3>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">API de Tasación Inmobiliaria & App Interactiva</h3>
           <p class="mt-3 text-slate-400 text-sm leading-relaxed">
             Pipeline completo de predicción de precios inmobiliarios. Modelo serializado servido mediante una API REST en FastAPI con esquemas de validación Pydantic, contenedor Dockerizado e interfaz interactiva para usuarios finales en Streamlit.
           </p>
           <div class="mt-4 p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 text-xs text-slate-300">
-            <span class="text-brand-cyan font-semibold">Arquitectura:</span> Dockerfile optimizado multi-stage con tiempos de inferencia &lt;45ms por solicitud.
+            <span class="text-cyan-400 font-semibold">Arquitectura:</span> Dockerfile optimizado multi-stage con tiempos de inferencia &lt;45ms por solicitud.
           </div>
         </div>
         <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
@@ -148,12 +139,12 @@
           <div class="flex items-center justify-between mb-4">
             <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Data Engineering & EDA</span>
             <div class="flex gap-3 text-slate-400">
-              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cyan transition-colors" title="Ver repositorio en GitHub">
+              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors" title="Ver repositorio en GitHub">
                 <i data-lucide="github" class="w-5 h-5"></i>
               </a>
             </div>
           </div>
-          <h3 class="text-xl font-bold text-slate-100 hover:text-brand-cyan transition-colors">Extracción y Tendencias del Mercado Tech</h3>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">Extracción y Tendencias del Mercado Tech</h3>
           <p class="mt-3 text-slate-400 text-sm leading-relaxed">
             Scraper asíncrono para ingesta periódica de vacantes tecnológicas. Pipeline ETL automatizado con almacenamiento en base de datos relacional y panel analítico para explorar la correlación entre stacks técnicos y rangos salariales.
           </p>
@@ -175,12 +166,12 @@
           <div class="flex items-center justify-between mb-4">
             <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Forecasting</span>
             <div class="flex gap-3 text-slate-400">
-              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cyan transition-colors" title="Ver repositorio en GitHub">
+              <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors" title="Ver repositorio en GitHub">
                 <i data-lucide="github" class="w-5 h-5"></i>
               </a>
             </div>
           </div>
-          <h3 class="text-xl font-bold text-slate-100 hover:text-brand-cyan transition-colors">Previsión de Demanda Retail Multitienda</h3>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">Previsión de Demanda Retail Multitienda</h3>
           <p class="mt-3 text-slate-400 text-sm leading-relaxed">
             Predicción de ventas a 30 días vista utilizando técnicas de series temporales jerárquicas y validación temporal con ventanas rodantes (*rolling-window backtesting*), superando baselines estadísticos clásicos.
           </p>
@@ -209,7 +200,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
         <div class="p-5 rounded-lg bg-slate-900/50 border border-slate-800">
-          <h3 class="text-brand-cyan font-semibold text-sm mb-3 flex items-center gap-2">
+          <h3 class="text-cyan-400 font-semibold text-sm mb-3 flex items-center gap-2">
             <i data-lucide="cpu" class="w-4 h-4"></i> Lenguajes & Core
           </h3>
           <ul class="space-y-1.5 text-sm text-slate-300">
@@ -221,7 +212,7 @@
         </div>
 
         <div class="p-5 rounded-lg bg-slate-900/50 border border-slate-800">
-          <h3 class="text-brand-emerald font-semibold text-sm mb-3 flex items-center gap-2">
+          <h3 class="text-emerald-400 font-semibold text-sm mb-3 flex items-center gap-2">
             <i data-lucide="brain" class="w-4 h-4"></i> Machine Learning
           </h3>
           <ul class="space-y-1.5 text-sm text-slate-300">
@@ -269,15 +260,15 @@
 
     <div class="mt-8 flex flex-wrap justify-center gap-4">
       <a href="mailto:lionsew@example.com" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 text-sm">
-        <i data-lucide="mail" class="w-4 h-4 text-brand-cyan"></i>
+        <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
         lionsew@example.com
       </a>
       <a href="https://linkedin.com/in/lionsew" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 text-sm">
-        <i data-lucide="linkedin" class="w-4 h-4 text-brand-cyan"></i>
+        <i data-lucide="linkedin" class="w-4 h-4 text-cyan-400"></i>
         LinkedIn
       </a>
       <a href="https://github.com/lionsew" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 text-sm">
-        <i data-lucide="github" class="w-4 h-4 text-brand-cyan"></i>
+        <i data-lucide="github" class="w-4 h-4 text-cyan-400"></i>
         GitHub
       </a>
     </div>
