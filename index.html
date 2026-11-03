@@ -1,428 +1,287 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth" data-theme="sunset">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Scientist Portfolio | Junior</title>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- DaisyUI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            400: '#4ade80',
-                            500: '#22c55e',
-                            600: '#16a34a',
-                        },
-                        dark: {
-                            900: '#0b0f19',
-                            800: '#111827',
-                            700: '#1f2937',
-                            600: '#374151'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Scientist Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              emerald: '#10b981',
+              dark: '#030712'
             }
+          }
         }
-    </script>
-    <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-  /* Definición personalizada de variables para el tema sunset */
-  [data-theme="sunset"] {
-    --color-base-100: oklch(22% 0.019 237.69);
-    --color-base-200: oklch(20% 0.019 237.69);
-    --color-base-300: oklch(18% 0.019 237.69);
-    --color-base-content: oklch(77.383% 0.043 245.096);
-    --color-primary: oklch(74.703% 0.158 39.947);
-    --color-primary-content: oklch(14.94% 0.031 39.947);
-    --color-secondary: oklch(72.537% 0.177 2.72);
-    --color-secondary-content: oklch(14.507% 0.035 2.72);
-    --color-accent: oklch(71.294% 0.166 299.844);
-    --color-accent-content: oklch(14.258% 0.033 299.844);
-    --color-neutral: oklch(26% 0.019 237.69);
-    --color-neutral-content: oklch(70% 0.019 237.69);
-    --color-info: oklch(85.559% 0.085 206.015);
-    --color-info-content: oklch(17.111% 0.017 206.015);
-    --color-success: oklch(85.56% 0.085 144.778);
-    --color-success-content: oklch(17.112% 0.017 144.778);
-    --color-warning: oklch(85.569% 0.084 74.427);
-    --color-warning-content: oklch(17.113% 0.016 74.427);
-    --color-error: oklch(85.511% 0.078 16.886);
-    --color-error-content: oklch(17.102% 0.015 16.886);
-    --rounded-box: 1rem;
-    --rounded-btn: 0.5rem;
-    --rounded-badge: 1rem;
-  }
-
-  .glass-card {
-    background: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .glass-card:hover {
-    border-color: rgba(74, 222, 128, 0.3);
-  }
-</style>
+      }
+    }
+  </script>
 </head>
-<body class="bg-base-100 text-base-content font-sans antialiased selection:bg-brand-500 selection:text-black">
+<body class="bg-[#030712] text-slate-200 font-sans antialiased selection:bg-cyan-500 selection:text-white">
 
-    <!-- Ambient background gradients -->
-    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-500/10 rounded-full blur-[120px]"></div>
-        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-[140px]"></div>
-        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-teal-500/10 rounded-full blur-[130px]"></div>
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#030712]/80 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="text-lg font-bold text-slate-100 flex items-center gap-2">
+        <span class="text-cyan-400 font-mono">&lt;DS&gt;</span>
+        <span>TuNombre</span>
+      </a>
+      <div class="flex items-center gap-6 text-sm font-medium text-slate-400">
+        <a href="#proyectos" class="hover:text-cyan-400 transition-colors">Proyectos</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Stack</a>
+        <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+        <a href="assets/cv.pdf" target="_blank" class="hidden sm:inline-flex px-3.5 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/20 transition-all">
+          CV PDF
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="hero" class="relative pt-24 pb-20 px-6 border-b border-slate-800/60 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.15),rgba(255,255,255,0))] pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Disponible para oportunidades Jr Data Scientist
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight">
+        Modelos con impacto comercial y pipelines <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">end-to-end</span>
+      </h1>
+      <p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Data Scientist especializado en convertir datos sin procesar en decisiones de negocio mediante Machine Learning, APIs desplegadas y análisis cuantitativo riguroso.
+      </p>
+      
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#proyectos" class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-colors flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+          Ver Proyectos
+          <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+        <a href="https://github.com/tu-usuario" target="_blank" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          GitHub Profile
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-100 flex items-center gap-3">
+        <i data-lucide="folder-git-2" class="text-cyan-400"></i>
+        Proyectos Destacados
+      </h2>
+      <p class="text-slate-400 mt-2 text-sm sm:text-base">Proyectos orientados a resolver problemas reales de negocio con código replicable.</p>
     </div>
 
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-base-100/80 border-b border-base-300">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#" class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
-                <span class="p-1.5 rounded-lg bg-brand-500/10 text-brand-400 border border-brand-500/20">
-                    <i data-lucide="terminal" class="w-4 h-4"></i>
-                </span>
-                <span>DS<span class="text-brand-400">.portfolio</span></span>
-            </a>
-
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-brand-400 transition-colors">Sobre mí</a>
-                <a href="#skills" class="hover:text-brand-400 transition-colors">Habilidades</a>
-                <a href="#projects" class="hover:text-brand-400 transition-colors">Proyectos</a>
-                <a href="#contact" class="hover:text-brand-400 transition-colors">Contacto</a>
-            </nav>
-
-            <div class="flex items-center gap-3">
-                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold rounded-lg bg-brand-500 text-black hover:bg-brand-400 transition-all shadow-sm shadow-brand-500/20">
-                    Hablemos
-                </a>
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-base-200">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
-                </button>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Card 1: Churn Prediction -->
+      <article class="bg-slate-900/60 rounded-xl border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-cyan-950/20">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Machine Learning</span>
+            <div class="flex gap-3 text-slate-400">
+              <a href="https://github.com/tu-usuario/churn-prediction" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+              <a href="#" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
             </div>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">Predicción de Churn & Estrategia de Retención</h3>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+            Modelo clasificador LightGBM con optimización bayesiana para identificar clientes con alto riesgo de baja. Se redujo el coste por falso negativo calibrando el umbral de probabilidad hacia el ROI de la campaña de retención.
+          </p>
+          <div class="mt-4 p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 text-xs text-slate-300">
+            <span class="text-emerald-400 font-semibold">Impacto:</span> Recall del 84% en el decil de mayor riesgo, proyectando un ahorro anual del 12% en bajas evitables.
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Python</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">LightGBM</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">SHAP</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Scikit-Learn</span>
+        </div>
+      </article>
+
+      <!-- Card 2: End-to-End API -->
+      <article class="bg-slate-900/60 rounded-xl border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-cyan-950/20">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">End-to-End / API</span>
+            <div class="flex gap-3 text-slate-400">
+              <a href="https://github.com/tu-usuario/house-pricing-api" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+              <a href="#" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">API de Tasación Inmobiliaria & App Interactiva</h3>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+            Pipeline completo de estimación de precios inmobiliarios. Modelo serializado servido vía FastAPI con validación Pydantic, contenedor Docker y frontend interactivo en Streamlit.
+          </p>
+          <div class="mt-4 p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 text-xs text-slate-300">
+            <span class="text-cyan-400 font-semibold">Arquitectura:</span> Dockerizado en Render + monitorización básica de latencia y deriva de predicción.
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">FastAPI</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Docker</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Streamlit</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">XGBoost</span>
+        </div>
+      </article>
+
+      <!-- Card 3: Scraping & EDA -->
+      <article class="bg-slate-900/60 rounded-xl border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-cyan-950/20">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Data Engineering & EDA</span>
+            <div class="flex gap-3 text-slate-400">
+              <a href="https://github.com/tu-usuario/tech-jobs-scraper" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+              <a href="#" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">Extracción y Tendencias del Mercado Tech</h3>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+            Scraper asíncrono sobre ofertas de empleo en portales tech. Limpieza automatizada en SQLite y visualización interactiva de salarios vs. skills demandadas por región.
+          </p>
+          <div class="mt-4 p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 text-xs text-slate-300">
+            <span class="text-purple-400 font-semibold">Volumen:</span> +15.000 ofertas procesadas periódicamente mediante GitHub Actions.
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Playwright</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">SQLite</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Polars</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Plotly</span>
+        </div>
+      </article>
+
+      <!-- Card 4: Series Temporales -->
+      <article class="bg-slate-900/60 rounded-xl border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-cyan-950/20">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Forecasting</span>
+            <div class="flex gap-3 text-slate-400">
+              <a href="https://github.com/tu-usuario/demand-forecasting" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 hover:text-cyan-400 transition-colors">Previsión de Demanda Retail Multitienda</h3>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+            Predicción de ventas a 30 días vista utilizando técnicas de series temporales jerárquicas y validación temporal rodante (*rolling window*), superando baselines estadísticos (ARIMA) en WAPE.
+          </p>
+          <div class="mt-4 p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 text-xs text-slate-300">
+            <span class="text-amber-400 font-semibold">Métrica:</span> WAPE reducido al 8.2% con ingeniería de estacionalidad y festivos.
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Prophet</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Statsmodels</span>
+          <span class="px-2 py-1 rounded bg-slate-950 border border-slate-800">Pandas</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS / TECH STACK -->
+  <section id="skills" class="py-16 px-6 bg-slate-950 border-y border-slate-800/80">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-10 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-100">Stack Tecnológico</h2>
+        <p class="text-slate-400 text-sm mt-2">Herramientas y tecnologías que utilizo en producción y modelado</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div class="p-5 rounded-lg bg-slate-900/50 border border-slate-800">
+          <h4 class="text-cyan-400 font-semibold text-sm mb-3 flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i> Lenguajes & Core
+          </h4>
+          <ul class="space-y-1.5 text-sm text-slate-300">
+            <li>Python (NumPy, Pandas, Polars)</li>
+            <li>SQL (PostgreSQL, SQLite)</li>
+            <li>Git & GitHub</li>
+            <li>Bash / Linux CLI</li>
+          </ul>
         </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 bg-base-100 border-b border-base-300 space-y-2">
-            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-400 hover:bg-base-200">Sobre mí</a>
-            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-400 hover:bg-base-200">Habilidades</a>
-            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-400 hover:bg-base-200">Proyectos</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-brand-400 hover:bg-base-200">Contacto</a>
+        <div class="p-5 rounded-lg bg-slate-900/50 border border-slate-800">
+          <h4 class="text-emerald-400 font-semibold text-sm mb-3 flex items-center gap-2">
+            <i data-lucide="brain" class="w-4 h-4"></i> Machine Learning
+          </h4>
+          <ul class="space-y-1.5 text-sm text-slate-300">
+            <li>Scikit-Learn</li>
+            <li>XGBoost / LightGBM</li>
+            <li>Optuna (Hiperparámetros)</li>
+            <li>SHAP (Explicabilidad)</li>
+          </ul>
         </div>
-    </header>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- Hero Section -->
-        <section id="about" class="pt-20 pb-16 md:pt-28 md:pb-24">
-            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-                <div class="flex-1 text-center md:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-medium mb-6">
-                        <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
-                        Disponible para nuevas oportunidades laborales
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-                        Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-200">Javier Chacón</span>
-                    </h1>
-                    <p class="mt-4 text-xl font-medium text-gray-300">
-                        Junior Data Scientist & ML Enthusiast
-                    </p>
-                    <p class="mt-4 text-gray-400 leading-relaxed max-w-xl">
-                        Especializado en traducir grandes volúmenes de datos en decisiones de negocio rentables mediante modelos predictivos, análisis riguroso y pipelines automatizados.
-                    </p>
-
-                    <!-- CTAs & Social Links -->
-                    <div class="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4">
-                        <a href="assets/cv.pdf" download target="_blank" class="btn btn-primary btn-sm rounded-lg font-semibold text-black transition flex items-center gap-2">
-                            <i data-lucide="file-text" class="w-4 h-4"></i>
-                            Descargar CV
-                        </a>
-                        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm rounded-lg transition flex items-center gap-2">
-                            <i data-lucide="github" class="w-4 h-4"></i>
-                            GitHub
-                        </a>
-                        <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm rounded-lg transition flex items-center gap-2">
-                            <i data-lucide="linkedin" class="w-4 h-4"></i>
-                            LinkedIn
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Profile Graphic -->
-                <div class="relative w-48 h-48 sm:w-64 sm:h-64 flex-shrink-0">
-                    <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-brand-500 to-teal-400 p-[2px] shadow-2xl">
-                        <div class="w-full h-full bg-base-100 rounded-2xl overflow-hidden flex items-center justify-center relative">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" 
-                                 alt="Profile avatar" 
-                                 class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-300">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Skills Section -->
-        <section id="skills" class="py-16 border-t border-base-300">
-            <div class="text-center md:text-left mb-12">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Stack & Habilidades</h2>
-                <p class="mt-2 text-gray-400 text-sm">Herramientas y metodologías aplicadas en mis pipelines de datos.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-6 rounded-xl transition duration-200">
-                    <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center mb-4">
-                        <i data-lucide="brain-circuit" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-white mb-2">Machine Learning</h3>
-                    <p class="text-xs text-gray-400 mb-4">Modelado supervisado, métricas de evaluación y tuning.</p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="badge badge-neutral badge-sm">Scikit-Learn</span>
-                        <span class="badge badge-neutral badge-sm">XGBoost</span>
-                        <span class="badge badge-neutral badge-sm">LightGBM</span>
-                        <span class="badge badge-neutral badge-sm">Feature Eng.</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl transition duration-200">
-                    <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center mb-4">
-                        <i data-lucide="database" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-white mb-2">Python & SQL</h3>
-                    <p class="text-xs text-gray-400 mb-4">Ingesta, limpieza y consultas complejas de bases de datos.</p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="badge badge-neutral badge-sm">Python 3</span>
-                        <span class="badge badge-neutral badge-sm">Pandas</span>
-                        <span class="badge badge-neutral badge-sm">NumPy</span>
-                        <span class="badge badge-neutral badge-sm">PostgreSQL</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl transition duration-200">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
-                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-white mb-2">Data Viz & EDA</h3>
-                    <p class="text-xs text-gray-400 mb-4">Storytelling visual para stakeholders técnicos y de negocio.</p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="badge badge-neutral badge-sm">Plotly</span>
-                        <span class="badge badge-neutral badge-sm">Seaborn</span>
-                        <span class="badge badge-neutral badge-sm">Matplotlib</span>
-                        <span class="badge badge-neutral badge-sm">Streamlit</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl transition duration-200">
-                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
-                        <i data-lucide="layers" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-white mb-2">MLOps & Herramientas</h3>
-                    <p class="text-xs text-gray-400 mb-4">Buenas prácticas, control de versiones y despliegue modular.</p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="badge badge-neutral badge-sm">Git / GitHub</span>
-                        <span class="badge badge-neutral badge-sm">Docker</span>
-                        <span class="badge badge-neutral badge-sm">FastAPI</span>
-                        <span class="badge badge-neutral badge-sm">MLflow</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-16 border-t border-base-300">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Proyectos Destacados</h2>
-                    <p class="mt-2 text-gray-400 text-sm">Casos prácticos con impacto de negocio real y código limpio.</p>
-                </div>
-                <div class="mt-4 md:mt-0 flex gap-2">
-                    <button class="filter-btn active btn btn-primary btn-xs" data-filter="all">Todos</button>
-                    <button class="filter-btn btn btn-ghost btn-xs" data-filter="ml">ML</button>
-                    <button class="filter-btn btn btn-ghost btn-xs" data-filter="end2end">End-to-End</button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
-                
-                <!-- Project 1 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col project-card" data-category="ml">
-                    <div class="h-48 bg-gradient-to-br from-base-200 to-base-300 border-b border-base-300 p-6 flex flex-col justify-between relative">
-                        <div class="flex justify-between items-start">
-                            <span class="badge badge-outline badge-success text-[11px]">
-                                Machine Learning Clásico
-                            </span>
-                            <span class="text-xs text-gray-400 font-mono">ROC-AUC: 0.88</span>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Predicción de Abandono de Clientes (Churn)</h3>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="mb-4">
-                                <h4 class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1">Impacto de Negocio:</h4>
-                                <p class="text-sm text-gray-300 leading-relaxed">
-                                    Diseño de un modelo predictivo para identificar clientes en riesgo de cancelación, permitiendo priorizar retenciones y reduciendo el coste de fuga estimado en un <strong>14%</strong>.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 mb-6">
-                                <span class="badge badge-ghost badge-sm">Python</span>
-                                <span class="badge badge-ghost badge-sm">XGBoost</span>
-                                <span class="badge badge-ghost badge-sm">SHAP Values</span>
-                                <span class="badge badge-ghost badge-sm">Scikit-learn</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pt-4 border-t border-base-300">
-                            <a href="https://github.com/tu-usuario/churn-prediction" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-brand-400 transition">
-                                <i data-lucide="github" class="w-4 h-4"></i> Código fuente
-                            </a>
-                            <a href="https://huggingface.co/spaces" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-400 hover:underline">
-                                <i data-lucide="external-link" class="w-4 h-4"></i> Demo interactiva
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col project-card" data-category="end2end">
-                    <div class="h-48 bg-gradient-to-br from-base-200 to-base-300 border-b border-base-300 p-6 flex flex-col justify-between relative">
-                        <div class="flex justify-between items-start">
-                            <span class="badge badge-outline badge-info text-[11px]">
-                                End-to-End + API
-                            </span>
-                            <span class="text-xs text-gray-400 font-mono">FastAPI + Docker</span>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Tasador Inmobiliario Automático</h3>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="mb-4">
-                                <h4 class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1">Impacto de Negocio:</h4>
-                                <p class="text-sm text-gray-300 leading-relaxed">
-                                    Pipeline integral desde el web scraping de 20.000 anuncios de vivienda hasta el despliegue de una API REST que calcula el valor de mercado con un error medio inferior al 7.5%.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 mb-6">
-                                <span class="badge badge-ghost badge-sm">FastAPI</span>
-                                <span class="badge badge-ghost badge-sm">Docker</span>
-                                <span class="badge badge-ghost badge-sm">Streamlit</span>
-                                <span class="badge badge-ghost badge-sm">Random Forest</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pt-4 border-t border-base-300">
-                            <a href="https://github.com/tu-usuario/real-estate-val" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-brand-400 transition">
-                                <i data-lucide="github" class="w-4 h-4"></i> Código fuente
-                            </a>
-                            <a href="https://streamlit.io" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-400 hover:underline">
-                                <i data-lucide="external-link" class="w-4 h-4"></i> App en vivo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 border-t border-base-300">
-            <div class="max-w-2xl mx-auto text-center">
-                <span class="badge badge-outline badge-accent uppercase tracking-wider text-xs">Contacto</span>
-                <h2 class="mt-4 text-3xl font-bold text-white tracking-tight">¿Tienes un proyecto o vacante en mente?</h2>
-                <p class="mt-3 text-sm text-gray-400">
-                    Estoy buscando activamente integrarme en un equipo donde aportar valor mediante análisis de datos y seguir acelerando mi aprendizaje.
-                </p>
-
-                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="mailto:tu-correo@ejemplo.com" class="btn btn-primary w-full sm:w-auto text-black font-semibold shadow-lg shadow-brand-500/20">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
-                        tu-correo@ejemplo.com
-                    </a>
-                    <button id="copy-email-btn" class="btn btn-outline w-full sm:w-auto">
-                        <i data-lucide="copy" class="w-4 h-4"></i>
-                        <span id="copy-text">Copiar Email</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-base-300 py-8 bg-base-200 text-center text-xs text-gray-500">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>© 2026 Javier. Construido para GitHub Pages con HTML, Tailwind CSS y DaisyUI.</p>
-            <div class="flex items-center gap-4">
-                <a href="https://github.com/tu-usuario" class="hover:text-gray-300 transition">GitHub</a>
-                <a href="https://linkedin.com/in/tu-usuario" class="hover:text-gray-300 transition">LinkedIn</a>
-            </div>
+        <div class="p-5 rounded-lg bg-slate-900/50 border border-slate-800">
+          <h4 class="text-purple-400 font-semibold text-sm mb-3 flex items-center gap-2">
+            <i data-lucide="server" class="w-4 h-4"></i> MLOps & Despliegue
+          </h4>
+          <ul class="space-y-1.5 text-sm text-slate-300">
+            <li>FastAPI / Flask</li>
+            <li>Docker básico</li>
+            <li>Streamlit / Hugging Face</li>
+            <li>MLflow (Tracking)</li>
+          </ul>
         </div>
-    </footer>
 
-    <!-- Interactive script -->
-    <script>
-        lucide.createIcons();
+        <div class="p-5 rounded-lg bg-slate-900/50 border border-slate-800">
+          <h4 class="text-amber-400 font-semibold text-sm mb-3 flex items-center gap-2">
+            <i data-lucide="bar-chart-3" class="w-4 h-4"></i> Visualización
+          </h4>
+          <ul class="space-y-1.5 text-sm text-slate-300">
+            <li>Plotly / Seaborn</li>
+            <li>Power BI (DAX básico)</li>
+            <li>Metabase</li>
+            <li>Storytelling con datos</li>
+          </ul>
+        </div>
 
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      </div>
+    </div>
+  </section>
 
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        });
+  <!-- CONTACTO / FOOTER -->
+  <footer id="contacto" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-100">¿Hablamos?</h2>
+    <p class="mt-3 text-slate-400 text-sm max-w-md mx-auto">
+      Abierto a propuestas de empleo como Data Scientist Jr, colaboraciones o proyectos freelance.
+    </p>
 
-        const copyBtn = document.getElementById('copy-email-btn');
-        const copyText = document.getElementById('copy-text');
-        copyBtn.addEventListener('click', () => {
-            const email = 'tu-correo@ejemplo.com';
-            navigator.clipboard.writeText(email).then(() => {
-                copyText.textContent = '¡Copiado!';
-                setTimeout(() => {
-                    copyText.textContent = 'Copiar Email';
-                }, 2000);
-            });
-        });
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="mailto:tu-correo@email.com" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 text-sm">
+        <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
+        tu-correo@email.com
+      </a>
+      <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 text-sm">
+        <i data-lucide="linkedin" class="w-4 h-4 text-cyan-400"></i>
+        LinkedIn
+      </a>
+      <a href="https://github.com/tu-usuario" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 text-sm">
+        <i data-lucide="github" class="w-4 h-4 text-cyan-400"></i>
+        GitHub
+      </a>
+    </div>
 
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+    <p class="mt-12 text-xs text-slate-600">
+      Diseñado para GitHub Pages • © 2026 TuNombre. Todos los derechos reservados.
+    </p>
+  </footer>
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => {
-                    b.classList.remove('btn-primary');
-                    b.classList.add('btn-ghost');
-                });
-                btn.classList.add('btn-primary');
-                btn.classList.remove('btn-ghost');
-
-                const filter = btn.getAttribute('data-filter');
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+  <script>
+    // Inicializar iconos de Lucide
+    lucide.createIcons();
+  </script>
 </body>
 </html>
